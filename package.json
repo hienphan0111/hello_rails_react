@@ -6,10 +6,30 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.2.1",
     "@hotwired/turbo-rails": "^7.3.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.0",
+    "react-router-dom": "^6.12.1",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
     "webpack": "^5.86.0",
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "lint": "eslint --ext .js app/javascript",
+    "lint:fix": "eslint --fix --ext .js app/javascript",
+    "test:coverage": "jest --coverage",
+    "test": "jest --coverage --watch",
+    "start": "bin/dev",
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch --mode development"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "babel-loader": "^9.1.2"
   }
 }
